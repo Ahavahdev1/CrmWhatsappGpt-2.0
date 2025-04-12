@@ -1,0 +1,86 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+#last-update {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+#status-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    min-height: 1.2em; /* Evita que layout pule quando a msg some */
+}
+
+#qr-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Espaço entre os cards */
+    margin-top: 20px;
+}
+
+.qr-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 240px; /* Largura fixa para cada card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-item h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #0056b3; /* Azul */
+}
+
+.qr-code-display {
+    /* Este div receberá o QR code gerado pela biblioteca */
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: 200px;
+    margin-bottom: 15px;
+    display: flex; /* Para centralizar o img/canvas gerado */
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Garante fundo branco */
+    padding: 5px; /* Pequeno padding interno */
+    border: 1px solid #eee;
+}
+
+.qr-item p {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: auto; /* Empurra para baixo se houver espaço */
+}
+
+/* Estilo para mensagens de erro */
+#status-message.error {
+    color: #D8000C; /* Vermelho */
+    font-weight: bold;
+    font-style: normal;
+}
