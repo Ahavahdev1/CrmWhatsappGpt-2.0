@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Codes WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Status de Conexão WhatsApp</h1>
+        <p id="last-update">Verificando...</p>
+    </header>
+
+    <main>
+        <p id="status-message">Carregando...</p>
+        <div id="qr-container">
+            <!-- Os QR Codes serão inseridos aqui pelo JavaScript -->
+        </div>
+    </main>
+
+    <!-- Inclui a biblioteca qrcode.js de um CDN -->
+    <!-- Certifique-se de ter conexão com a internet para carregar -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+    <!-- Inclui nosso script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
