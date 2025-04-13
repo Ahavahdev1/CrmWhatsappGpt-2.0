@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - WhatsApp Bot</title>
+    <!-- Inclui o CSS geral e o específico -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Dashboard de Administração - WhatsApp Bot</h1>
+        <div id="connection-status">Conectando ao servidor...</div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Painel Esquerdo: Lista de Setores e Status -->
+        <aside class="panel sectors-panel">
+            <h2>Setores / Clientes</h2>
+            <ul id="sector-list">
+                <li>Carregando setores...</li>
+            </ul>
+        </aside>
+
+        <!-- Painel Central: Lista de Usuários do Setor Selecionado -->
+        <section class="panel users-panel">
+            <h2>Usuários (<span id="selected-sector-name">Nenhum setor</span>)</h2>
+            <ul id="user-list">
+                <li>Selecione um setor para ver os usuários.</li>
+            </ul>
+        </section>
+
+        <!-- Painel Direito: Conversa do Usuário Selecionado -->
+        <section class="panel conversation-panel">
+            <h2>Conversa (<span id="selected-user-number">Nenhum usuário</span>)</h2>
+            <div id="conversation-history">
+                <p>Selecione um usuário para ver a conversa.</p>
+            </div>
+            <!-- Opcional: Área para enviar mensagem como admin -->
+            <div id="admin-reply-area" style="display: none;">
+                <textarea id="admin-message-input" placeholder="Digite a mensagem para enviar como este setor..."></textarea>
+                <button id="admin-send-button">Enviar Mensagem</button>
+                <p class="send-status"></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Biblioteca de QR Code (necessária se formos exibir QR aqui também) -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+    <!-- Script principal do dashboard -->
+    <script src="admin_script.js"></script>
+</body>
+</html>
